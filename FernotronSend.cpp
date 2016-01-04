@@ -1,4 +1,4 @@
-/*
+/* 
   FernotronSend - Application to send RF-codes to Fernotron shutters.
   See README.md for usage.
   The basis of this code has been taken from:

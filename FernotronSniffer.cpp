@@ -1,4 +1,4 @@
-/*
+/* 
   FernotronSniffer - Application to capture RF-codes from
                      Fernotron remote controls
   See README.md for usage.

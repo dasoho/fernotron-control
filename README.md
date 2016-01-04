@@ -78,9 +78,9 @@ Ein beipielhafte Konfiguration eines Rolladenschalters in FHEM sieht dann wie fo
 Dieser FHEM Schalter bewegt dann den ersten Rolladen der ersten Gruppe hoch bzw. runter.
 
 Um die Rechteproblematik im Zusammenhang mit wiringPi zu umgehen kann man Eigentümer und Rechte
-des Skripts FernotronRemote.sh wie folgt abändern:
-- sudo chown root FernotronRemote.sh
-- sudo chmod 4711 FernotronRemote.sh
+des Programms *FernotronSend* wie folgt abändern:
+- sudo chown root ./FernotronSend
+- sudo chmod 4711 ./FernotronSend
 
 
 

@@ -1,4 +1,4 @@
-/*
+/* 
   Fernotron - Library for remote control of Fernotron shutters
   The basis of this code has been taken from:
   https://github.com/sui77/rc-switch

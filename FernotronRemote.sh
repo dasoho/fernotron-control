@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############################################################################
-# Example script to control the Fernotron shutters
+# Example script to control the Fernotron shutters 
 # usage:
 # ./FernotronRemote.sh <Gruppennummer> <Rolladennummer> [u|d|s]  -> Einzel Rolladen
 # ./FernotronRemote.sh <Gruppennummer> [u|d|s]  -> Rolläden der Gruppe
