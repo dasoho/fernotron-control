@@ -60,6 +60,7 @@ Senden der Fernbedienungscodes
 Die aufgezeichneten Codes können mit Hilfe des Programmes FernotronSend gesendet werden:
 - cd ~/fernotron-control
 - sudo ./FernotronSend *code*
+
 Je nach Code sollte nun der der entsprechende Rolladen auf- oder zufahren bzw. stoppen.
 
 Einbindung in FHEM
