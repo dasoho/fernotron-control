@@ -5,7 +5,7 @@ Control Fernotron shutters with FHEM and Raspberry Pi
 Benötigte Hardware
 ------------------
 433 MHz Sender/Empfänger Modul
-Getestet mit:
+- Getestet mit:
 http://www.amazon.de/gp/product/B00OLI93IC/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00OLI93IC&linkCode=as2&tag=epcblog-21&linkId=OAE7APMAS2T3VU6N
 
 Hardwarevorbereitung Sendemodul
@@ -26,20 +26,20 @@ Hardwarevorbereitung Empfangsmodul
 Softwareinstallation
 --------------------
 Git installieren (falls noch nicht vorhanden)
-sudo apt-get update
-sudo apt-get install git-core
+- sudo apt-get update
+- sudo apt-get install git-core
 
 WiringPi installieren und kompillieren
-cd ~
-git clone git://git.drogon.net/wiringPi
-cd wiringPi
-./build
+- cd ~
+- git clone git://git.drogon.net/wiringPi
+- cd wiringPi
+- ./build
 
 Fernotron Software installieren und kompillieren
-cd ~
-git clone git://github.com/dasoho/fernotron-control.git
-cd fernotron-control
-make all
+- cd ~
+- git clone git://github.com/dasoho/fernotron-control.git
+- cd fernotron-control
+- make all
 
 Damit ist die Softwareinstallation abgeschlossen.
 
@@ -47,8 +47,8 @@ Damit ist die Softwareinstallation abgeschlossen.
 Aufzeichnen der Fernbedienungscodes
 -----------------------------------
 Starten des Programms zur Aufzeichnung der Codes:
-cd ~/fernotron-control
-sudo ./FernotronSniffer
+- cd ~/fernotron-control
+- sudo ./FernotronSniffer
 
 Nun die Fernotron Programmierzentrale DIREKT an die Antenne des Empfangsmoduls halten
 und einen Rolladen auf-/bzw. abfahren.
@@ -58,8 +58,8 @@ Fehler auftreten werden diese auch auf der Konsole angezeigt.
 Senden der Fernbedienungscodes
 ------------------------------
 Die aufgezeichneten Codes können mit Hilfe des Programmes FernotronSend gesendet werden:
-cd ~/fernotron-control
-sudo ./FernotronSend <code>
+- cd ~/fernotron-control
+- sudo ./FernotronSend <code>
 Je nach Code sollte nun der der entsprechende Rolladen auf- oder zufahren bzw. stoppen.
 
 Einbindung in FHEM
@@ -78,8 +78,8 @@ Dieser FHEM Schalter bewegt dann den ersten Rolladen der ersten Gruppe hoch bzw.
 
 Um die Rechteproblematik im Zusammenhang mit wiringPi zu umgehen kann man Eigentümer und Rechte
 des Skripts FernotronRemote.sh wie folgt abändern:
-sudo chown root FernotronRemote.sh
-sudo chmod 4711 FernotronRemote.sh
+- sudo chown root FernotronRemote.sh
+- sudo chmod 4711 FernotronRemote.sh
 
 
 
