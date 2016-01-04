@@ -59,7 +59,7 @@ Senden der Fernbedienungscodes
 ------------------------------
 Die aufgezeichneten Codes können mit Hilfe des Programmes FernotronSend gesendet werden:
 - cd ~/fernotron-control
-- sudo ./FernotronSend <code>
+- sudo ./FernotronSend *code*
 Je nach Code sollte nun der der entsprechende Rolladen auf- oder zufahren bzw. stoppen.
 
 Einbindung in FHEM
@@ -68,11 +68,11 @@ Der Einfachheit halber sollten zunächst alle gewünschten Rolladenbewegungen in
 zusammengefaßt werden. Als Beispiel dient das Skript FernotronRemote.sh
 Die Einbindung in FHEM erfolgt über das Modul GenShellSwitch.pm, welches man sich serperat im
 Internet besorgen muss. Das Modul wird in den Ordner fhem/FHEM kopiert und anschließend mit
-reload <modulename> geladen.
+reload *modulename* geladen.
 Ein beipielhafte Konfiguration eines Rolladenschalters in FHEM sieht dann wie folgt aus:
 
-define Rolladen_WZ1 GenShellSwitch /home/pi/fernotron-control/FernotronRemote.sh 1 1 u d
-attr Rolladen_WZ1 cmdIcon on:black_up off:black_down
+- define Rolladen_WZ1 GenShellSwitch /home/pi/fernotron-control/FernotronRemote.sh 1 1 u d
+- attr Rolladen_WZ1 cmdIcon on:black_up off:black_down
 
 Dieser FHEM Schalter bewegt dann den ersten Rolladen der ersten Gruppe hoch bzw. runter.
 
