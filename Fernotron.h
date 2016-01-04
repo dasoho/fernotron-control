@@ -1,12 +1,9 @@
 /*
-  RCSwitch - Arduino libary for remote control outlet switches
-  Copyright (c) 2011 Suat Özgür.  All right reserved.
-
-  Contributors:
-  - Andre Koehler / info(at)tomate-online(dot)de
-  - Gordeev Andrey Vladimirovich / gordeev(at)openpyro(dot)com
+  Fernotron - Library for remote control of Fernotron shutters
+  The basis of this code has been taken from:
+  https://github.com/sui77/rc-switch
   
-  Project home: http://code.google.com/p/rc-switch/
+  Project home: https://github.com/dasoho/fernotron-control
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -22,6 +19,7 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+
 #ifndef _Fernotron_h
 #define _Fernotron_h
 

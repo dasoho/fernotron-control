@@ -1,15 +1,25 @@
 /*
+  FernotronSend - Application to send RF-codes to Fernotron shutters.
+  See README.md for usage.
+  The basis of this code has been taken from:
+  https://github.com/sui77/rc-switch
+  
+  Project home: https://github.com/dasoho/fernotron-control
 
- 'codesend' hacked from 'send' by @justy
- 
- - The provided rc_switch 'send' command uses the form systemCode, unitCode, command
-   which is not suitable for our purposes.  Instead, we call 
-   send(code, length); // where length is always 24 and code is simply the code
-   we find using the RF_sniffer.ino Arduino sketch.
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) any later version.
 
- Usage: ./codesend decimalcode
- (Use RF_Sniffer.ino to check that RF signals are being produced by the RPi's transmitter)
- */
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
 
 #include "Fernotron.h"
 #include <stdlib.h>
