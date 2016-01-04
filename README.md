@@ -50,7 +50,7 @@ Starten des Programms zur Aufzeichnung der Codes:
 - cd ~/fernotron-control
 - sudo ./FernotronSniffer
 
-Nun die Fernotron Programmierzentrale DIREKT an die Antenne des Empfangsmoduls halten
+Nun die Fernotron Programmierzentrale **DIREKT** an die Antenne des Empfangsmoduls halten
 und einen Rolladen auf-/bzw. abfahren.
 Der Fernbedienungscode wird zyklisch auf der Konsole ausgegeben. Falls beim Empfang 
 Fehler auftreten werden diese auch auf der Konsole angezeigt.
@@ -66,8 +66,8 @@ Je nach Code sollte nun der der entsprechende Rolladen auf- oder zufahren bzw. s
 Einbindung in FHEM
 ------------------
 Der Einfachheit halber sollten zunächst alle gewünschten Rolladenbewegungen in einem Skript
-zusammengefaßt werden. Als Beispiel dient das Skript FernotronRemote.sh
-Die Einbindung in FHEM erfolgt über das Modul GenShellSwitch.pm, welches man sich serperat im
+zusammengefaßt werden. Als Beispiel dient das Skript *FernotronRemote.sh*.
+Die Einbindung in FHEM erfolgt über das Modul *GenShellSwitch.pm*, welches man sich serperat im
 Internet besorgen muss. Das Modul wird in den Ordner fhem/FHEM kopiert und anschließend mit
 reload *modulename* geladen.
 Ein beipielhafte Konfiguration eines Rolladenschalters in FHEM sieht dann wie folgt aus:
