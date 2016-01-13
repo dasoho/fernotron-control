@@ -53,7 +53,7 @@ bool Fernotron::codeAvailable = false;
 Fernotron::Fernotron() {
   nReceiverInterrupt = -1;
   nTransmitterPin = -1;
-  setRepeatTransmit(3);
+  setRepeatTransmit(1);
 }
 
 

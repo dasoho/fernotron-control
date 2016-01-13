@@ -34,7 +34,11 @@ int main(int argc, char *argv[]) {
     // for more information.
     int PIN = 0;
 
-    if (strlen(argv[1]) != FERNOTRON_PROTOCOL_LENGTH) {
+    if (argc < 2 || argc > 3) {
+      printf("Wrong number of parameters\n1. Fernotron code\n2. Number of resends (optional)");
+      return 1;
+    }
+    else    if (strlen(argv[1]) != FERNOTRON_PROTOCOL_LENGTH) {
       printf("Input code has wrong length.  Input: %d,  Expected: %d\n", strlen(argv[1]), FERNOTRON_PROTOCOL_LENGTH);
       return 1;
     }
@@ -44,6 +48,9 @@ int main(int argc, char *argv[]) {
       }
       Fernotron myFernotron = Fernotron();
       if (myFernotron.enableTransmit(PIN)) {
+        if (argc == 3){
+          myFernotron.setRepeatTransmit(atoi(argv[2]));
+        }
         myFernotron.send(argv[1]);
       }
       else {
