@@ -85,3 +85,13 @@ des Programms *FernotronSend* wie folgt abändern:
 Einbindung in openHAB 1.x
 -------------------------
 Die Einbindung in openHAB ist sehr einfach: Es werden Items, Rules und natürlich die Sitemap benötigt:
+
+Item-Definition (nur als virtueller Schalter definiert): 
+```
+Rollershutter   Rolladen_WZ_Spielplatz    "Spielplatz" <rollershutter>
+```
+Sitemap-Einbindung: 
+```
+Switch item=Rolladen_WZ_Spielplatz mappings=[UP="Rauf ", STOP="X", DOWN="Runter"]
+```
+
