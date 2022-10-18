@@ -94,4 +94,18 @@ Sitemap-Einbindung:
 ```
 Switch item=Rolladen_WZ_Spielplatz mappings=[UP="Rauf ", STOP="X", DOWN="Runter"]
 ```
+Rule-Definition: 
+```
+rule Rolladen_WZ_Spielplatz
+    when
+        Item Rolladen_WZ_Spielplatz received command
+    then
+        switch (receivedCommand) {
+            case UP:   (1..5).forEach[executeCommandLine("/usr/share/openhab/configurations/scripts/FernotronSend <code>",5000)]
+            case STOP: (1..5).forEach[executeCommandLine("/usr/share/openhab/configurations/scripts/FernotronSend <code>",5000)]
+            case DOWN: (1..5).forEach[executeCommandLine("/usr/share/openhab/configurations/scripts/FernotronSend <code>",5000)]
+        }
+end
+```
+
 
